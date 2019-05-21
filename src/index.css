@@ -1,0 +1,22 @@
+#gallery{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+img {
+    width: auto;
+    height: 300px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    background-color: rgb(219, 184, 104);
+}
+
+body {
+    background-color: rgb(174, 178, 183);
+}
