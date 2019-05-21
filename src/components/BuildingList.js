@@ -4,8 +4,9 @@ class BuildingList extends Component {
     
 
     renderTemplate() {
+        const buildings = this.props.buildings;
         return /*html*/`
-            <ul id="buildings">Word</ul>
+            <ul id="buildings">${buildings.length}  Dirt is still Awesome</ul>
         `;
     }
 

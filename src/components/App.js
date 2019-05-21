@@ -1,8 +1,11 @@
+import buildings from '../../data/buildings.js';
+
 import Component from './Component.js';
 import Header from './Header.js';
 import BuildingList from './BuildingList.js';
 
 class App extends Component {
+
     render() {
         const dom = this.renderDOM();
 
@@ -12,7 +15,7 @@ class App extends Component {
         const headerDOM = header.render();
         dom.insertBefore(headerDOM, main);
 
-        const buildingList = new BuildingList();
+        const buildingList = new BuildingList({ buildings });
         const buildingListDOM = buildingList.render();
         main.appendChild(buildingListDOM);
 
