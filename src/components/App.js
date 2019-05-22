@@ -1,5 +1,5 @@
 import buildings from '../../data/buildings.js';
-
+import Filter from '../components/Filter.js';
 import Component from './Component.js';
 import Header from './Header.js';
 import BuildingList from './BuildingList.js';
@@ -22,10 +22,14 @@ class App extends Component {
                 buildingList.update({ buildings });
             }
         });
-
+        
         const addImageDOM = addImage.render();
         main.appendChild(addImageDOM);
-
+        
+        const filter = new Filter();
+        const filterDOM = filter.render();
+        main.appendChild(filterDOM);
+        
         const buildingList = new BuildingList({ 
             buildings,
             onRemove: (buildingToRemove) => {
