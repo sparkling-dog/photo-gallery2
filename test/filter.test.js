@@ -33,8 +33,10 @@ const buildings = [
 ];
 
 function filterBuildings(buildings, filter) {
+    const lowerCaseFilter = filter.text.toLowerCase();
     return buildings.filter(building => {
-        const hasTitle = building.title.includes(filter.text);
+        const lowerCaseTitle = building.title.toLowerCase();
+        const hasTitle = lowerCaseTitle.includes(lowerCaseFilter);
         return hasTitle;
     });
 }
