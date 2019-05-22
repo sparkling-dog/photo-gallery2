@@ -15,9 +15,9 @@ test('building item html', assert => {
     const expected = /*html*/ `
         <li>
             <img class="image" src="${building.src}" alt="Image of ${building.title}">
+            <button class="remove-button">X</button>  
             <p class="title">${building.title}</p>
             <p class="description">${building.description}</p>
-            <button class="remove-button">X</button>  
         </li>
     `;
     //act
