@@ -26,7 +26,15 @@ class App extends Component {
         const addImageDOM = addImage.render();
         main.appendChild(addImageDOM);
 
-        const buildingList = new BuildingList({ buildings });
+        const buildingList = new BuildingList({ 
+            buildings,
+            onRemove: (buildingToRemove) => {
+                const index = buildings.indexOf(buildingToRemove);
+                buildings.splice(index, 1);
+
+                buildingList.update({ buildings });
+            }
+        });
         const buildingListDOM = buildingList.render();
         main.appendChild(buildingListDOM);
 

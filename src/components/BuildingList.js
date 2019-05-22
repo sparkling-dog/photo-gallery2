@@ -6,9 +6,10 @@ class BuildingList extends Component {
     render() {
         const list = this.renderDOM();
         const buildings = this.props.buildings;
+        const onRemove = this.props.onRemove;
 
         buildings.forEach(building => {
-            const buildingItem = new BuildingItem({ building });
+            const buildingItem = new BuildingItem({ building, onRemove });
             const buildingItemDOM = buildingItem.render();
             list.appendChild(buildingItemDOM);
         });
@@ -16,9 +17,8 @@ class BuildingList extends Component {
     }
 
     renderTemplate() {
-        const buildings = this.props.buildings;
         return /*html*/`
-            <ul id="buildings">${buildings.length}  Dirt is still Awesome</ul>
+            <ul id="buildings"></ul>
         `;
     }
 

@@ -1,22 +1,27 @@
 import Component from '../components/Component.js';
 
 class BuildingItem extends Component {
-    
-    // for stretch goal
-    // render() {
-    //     const buildingItem = this.renderDOM();
-    //     const building = this.props.building;
+    render() {
+        const buildingItem = this.renderDOM();
+        const onRemove = this.props.onRemove;
+        const building = this.props.building;
+        const removeButton = buildingItem.querySelector('button');
 
-    //     return buildingItem;
-    // }
+        removeButton.addEventListener('click', () => {
+            onRemove(building);
+        });
+
+        return buildingItem;
+    }
 
     renderTemplate() {
         const building = this.props.building;
         return /*html*/ `
             <li>
                 <img class="image" src="${building.src}" alt="Image of ${building.title}">
+                <button class="remove-button">X</button>   
                 <p class="title">${building.title}</p>
-                <p class="description">${building.description}</p>    
+                <p class="description">${building.description}</p> 
             </li>
         `;
     }

@@ -15,8 +15,14 @@ ul {
 
 header {
     background-color: rgb(219, 184, 104);
+    text-align: center;
 }
 
 body {
     background-color: rgb(174, 178, 183);
+}
+
+li {
+    border: solid rgba(97, 254, 230, 0.201) 2px;
+    margin-bottom: 9px;
 }
