@@ -19,17 +19,23 @@ class App extends Component {
         const headerDOM = header.render();
         dom.insertBefore(headerDOM, main);
 
-        const addImage = new AddImage({
+        // const addImage = new AddImage({
+        //     onAdd: (newBuilding) => {
+        //         buildings.unshift(newBuilding);
+        //         buildingList.update({ buildings });
+        //     }
+        // });
+        
+        // const addImageDOM = addImage.render();
+        // main.appendChild(addImageDOM);
+
+        const modal = new Modal({
             onAdd: (newBuilding) => {
                 buildings.unshift(newBuilding);
                 buildingList.update({ buildings });
             }
         });
         
-        const addImageDOM = addImage.render();
-        main.appendChild(addImageDOM);
-
-        const modal = new Modal();
         const modalDOM = modal.render();
         main.appendChild(modalDOM);
 
