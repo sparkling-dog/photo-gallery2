@@ -4,6 +4,7 @@ import Component from './Component.js';
 import Header from './Header.js';
 import BuildingList from './BuildingList.js';
 import AddImage from './AddImage.js';
+import Modal from './Modal.js';
 
 import filterBuildings from '../filterBuildings.js';
 
@@ -27,6 +28,11 @@ class App extends Component {
         
         const addImageDOM = addImage.render();
         main.appendChild(addImageDOM);
+
+        const modal = new Modal();
+        const modalDOM = modal.render();
+        main.appendChild(modalDOM);
+
 
         const filter = new Filter({
             onFilter: filter => {

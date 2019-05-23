@@ -26,3 +26,6 @@ li {
     border: solid rgba(97, 254, 230, 0.201) 2px;
     margin-bottom: 9px;
 }
+input {
+    margin: 3px;
+}
