@@ -1,3 +1,3 @@
 import './html-equal.js';
-import './filter.test.js';
+import './filterBuildings.test.js';
 import './BuildingItem.test.js';
