@@ -3,7 +3,6 @@ import Filter from '../components/Filter.js';
 import Component from './Component.js';
 import Header from './Header.js';
 import BuildingList from './BuildingList.js';
-import AddImage from './AddImage.js';
 import Modal from './Modal.js';
 
 import filterBuildings from '../filterBuildings.js';
@@ -18,16 +17,6 @@ class App extends Component {
         const header = new Header();
         const headerDOM = header.render();
         dom.insertBefore(headerDOM, main);
-
-        // const addImage = new AddImage({
-        //     onAdd: (newBuilding) => {
-        //         buildings.unshift(newBuilding);
-        //         buildingList.update({ buildings });
-        //     }
-        // });
-        
-        // const addImageDOM = addImage.render();
-        // main.appendChild(addImageDOM);
 
         const modal = new Modal({
             onAdd: (newBuilding) => {

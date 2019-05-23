@@ -28,5 +28,4 @@ class BuildingItem extends Component {
     }
 }
 
-
 export default BuildingItem;
