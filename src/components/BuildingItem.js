@@ -22,6 +22,7 @@ class BuildingItem extends Component {
                 <button class="remove-button">X</button>   
                 <p class="title">${building.title}</p>
                 <p class="location">Located in ${building.location}</p>
+                <p class="century">Created in the ${building.century} century.</p>
             </li>
         `;
     }

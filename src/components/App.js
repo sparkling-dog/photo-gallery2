@@ -33,6 +33,7 @@ class App extends Component {
             onAdd: (newBuilding) => {
                 buildings.unshift(newBuilding);
                 buildingList.update({ buildings });
+                filter.update();
             }
         });
         
