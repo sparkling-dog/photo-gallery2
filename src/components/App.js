@@ -5,6 +5,8 @@ import Header from './Header.js';
 import BuildingList from './BuildingList.js';
 import AddImage from './AddImage.js';
 
+import filterBuildings from '../filterBuildings.js';
+
 class App extends Component {
 
     render() {
@@ -25,8 +27,14 @@ class App extends Component {
         
         const addImageDOM = addImage.render();
         main.appendChild(addImageDOM);
-        
-        const filter = new Filter();
+
+        const filter = new Filter({
+            onFilter: filter => {
+                const filtered = filterBuildings(buildings, filter);
+                buildingList.update({ buildings: filtered });
+
+            }
+        });
         const filterDOM = filter.render();
         main.appendChild(filterDOM);
         

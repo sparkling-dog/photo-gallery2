@@ -1,3 +1,5 @@
+import filterBuildings from '../src/filterBuildings.js';
+
 const test = QUnit.test;
 
 QUnit.module('filter');
@@ -31,16 +33,7 @@ const buildings = [
 
 
 
-function filterBuildings(buildings, filter) {
-    const lowerCaseFilter = filter.text.toLowerCase();
-    return buildings.filter(building => {
-        const lowerCaseTitle = building.title.toLowerCase();
-        const lowerCaseLocation = building.location.toLowerCase();
-        const hasTitle = lowerCaseTitle.includes(lowerCaseFilter);
-        const hasLocation = lowerCaseLocation.includes(lowerCaseFilter);
-        return hasTitle || hasLocation;
-    });
-}
+
 
 
 
