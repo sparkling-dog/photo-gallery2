@@ -13,7 +13,7 @@ class AddImage extends Component {
             const newBuilding = {
                 src: formData.get('url'),
                 title: formData.get('title'),
-                description: formData.get('description')
+                location: formData.get('location')
             };
 
             onAdd(newBuilding);
@@ -30,7 +30,8 @@ class AddImage extends Component {
             <form class="addImage">
                 <label>Image URL: <input src="" class="image" type="text" name="url"></label>
                 <label>Title: <input class="image" type="text" name="title"></label>
-                <label>Description: <textarea class="image" type="text" name="description"></textarea></label>
+                <label>Location: <input class="image" type="text" name="location"></label>
+
                 <button>Submit</button>
             </form>
         `;

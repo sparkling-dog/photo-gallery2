@@ -21,7 +21,7 @@ class BuildingItem extends Component {
                 <img class="image" src="${building.src}" alt="Image of ${building.title}">
                 <button class="remove-button">X</button>   
                 <p class="title">${building.title}</p>
-                <p class="description">${building.description}</p> 
+                <p class="location">Located in ${building.location}</p>
             </li>
         `;
     }
