@@ -9,7 +9,7 @@ test('building item html', assert => {
     const building = {
         src: './assets/Acropolis.jpg',
         title: 'Acropolis',
-        location: 'Ancient greek building from 19th century b.c.'
+        location: 'Greece'
     };
 
     const expected = /*html*/ `
@@ -17,7 +17,7 @@ test('building item html', assert => {
             <img class="image" src="${building.src}" alt="Image of ${building.title}">
             <button class="remove-button">X</button>  
             <p class="title">${building.title}</p>
-            <p class="location">${building.location}</p>
+            <p class="location">Located in ${building.location}</p>
         </li>
     `;
     //act

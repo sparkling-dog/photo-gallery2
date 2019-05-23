@@ -145,22 +145,22 @@ test('tests location filter', assert => {
     }]);
 });
 
-test('tests search by century', assert => {
-    // Arrange
-    const filter = {
-        text: 15
-    };
+// test('tests search by century', assert => {
+//     // Arrange
+//     const filter = {
+//         text: 15
+//     };
    
-    // Act
-    const filtered = filterBuildings(buildings, filter);
+//     // Act
+//     const filtered = filterBuildings(buildings, filter);
 
-    // Assert
-    assert.deepEqual(filtered, [{
-        src: './assets/Machu-Picchu.jpg',
-        title: 'Machu-Picchu1',
-        keyword: 'picchu',
-        location: 'Peru',
-        century: 15,
-        beforeOrAfter: 'after'
-    }]);
-});
+//     // Assert
+//     assert.deepEqual(filtered, [{
+//         src: './assets/Machu-Picchu.jpg',
+//         title: 'Machu-Picchu1',
+//         keyword: 'picchu',
+//         location: 'Peru',
+//         century: 15,
+//         beforeOrAfter: 'after'
+//     }]);
+// });
